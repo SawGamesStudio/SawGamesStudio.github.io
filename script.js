@@ -105,11 +105,8 @@ function removeParticle (e) {
 if (document.body.animate) {
     document.querySelectorAll('a').forEach(button => button.addEventListener('click', pop));
 }
-// *партиклы
-
 // *Игра
 const canvas = document.getElementById('canvas1');
-
 if(canvas.style.display != 'none'){
 class Player{
     constructor(game){
@@ -195,3 +192,7 @@ function gameLoop(currenttime) {
 }
 gameLoop(0);
 }
+document.querySelector('.burger').addEventListener('click', function(){
+    this.classList.toggle('active');
+    document.querySelector('.dropdowncontent').classList.toggle('open');
+})
