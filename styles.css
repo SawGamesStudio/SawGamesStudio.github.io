@@ -3,6 +3,9 @@
     color: slategrey;
     
 }
+.open{
+    display: flex !important;
+}
 header{
     position: sticky;
     top: 0px;
@@ -168,20 +171,68 @@ canvas{
 img{
     max-width: 100%;
 }
-.dropdownmenu, .dropdowncontent{
+.dropdownmenu{
     display: none;
 }
-.dropdownicons{
-    position: absolute;
+.dropdownmenu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 10px;
+}
+.dropdowncontent{display: none; animation: burgeranimation 0.3s ease-in-out 0s 1 forwards normal;}
+@keyframes burgeranimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.burger{
+    display: flex;
+    position: relative;
     z-index: 2;
+    align-items: center;
+    align-self: flex-end;
+    justify-content: flex-end;
+    width: 40px;
+    height: 35px;
+    margin: 10px;
+    margin-top: 15px;
 }
-#menu{
-    display: none;
+.burger span{
+    height: 4px;
+    width: 100%;
+    transform: scale(1);
+    transition: all 0.3s ease 0s;
+    background-color: whitesmoke;
+}
+.burger::before,.burger::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: whitesmoke;
+    transition: all 0.3s ease 0s;
+}
+.burger::before{
+    top: 0;
+}
+.burger::after{
+    bottom: 0;
+}
+.burger.active span {transform: scale(0);}
+.burger.active::before{
+    top: 50%;
+    transform: rotate(-45deg) translateY(-50%);
+}
+.burger.active::after{
+    bottom: 50%;
+    transform: rotate(45deg) translateY(50%);
+}
+/* #menu{
     background: none;
     outline: none;
     border: none;
     align-self: flex-end;
-}
+} */
 @media screen and (max-width: 1200px) {
     .icons{
         gap: 5rem;
@@ -205,15 +256,21 @@ img{
     }
 }
 @media screen and (max-width: 576px) {
-    #menu{
-        display: block;
-    }
+
     .dropdownmenu{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        overflow-y: auto;
+        background-color: rgba(0, 0, 0, 0.705);
     }
-    .dropdowncontent:active{
-        display: block;
+    
+    .dropdownmenu li{
+        text-align: right;
     }
+    
     .icons{
         display: none;
     }

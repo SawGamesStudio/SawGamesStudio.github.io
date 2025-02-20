@@ -22,16 +22,28 @@
                         <li><a href="https://youtube.com/@sawgamesstudio?si=k7ueZV6uH3KtnTNZ"><img class="socialmedia" src="./images/youtube.jpg" alt="youtube"></a></li>
                     </ul>
                     <div class="dropdownmenu">
-                        <button id="menu"><img src="images/menu.png" alt="menu"></button>
+                        <!-- // <button id="menu"><img src="images/menu.png" alt="menu"></button> -->
+                        <div class="burger"><span></span></div>
                         <div class="dropdowncontent">
-                            <ul class="dropdownicons">
-                                <li><a href="https://boosty.to/sgstudio"><img class="socialmedia" src="./images/progrev.jpg" alt="boosty"></a></li>
-                                <li><a href="https://apps.rustore.ru/app/com.sgstudio.photographer"><img class="socialmedia" src="./images/rustore.jpg" alt="rustore"></a></li>
-                                <li><a href="https://t.me/sawgamesstudio"><img class="socialmedia" src="./images/telega.jpg" alt="telega"></a></li>
-                                <li><a href="https://vk.com/sawgamesstudio"><img class="socialmedia" src="./images/vk.jpg" alt="vk"></a></li>
-                                <li><a href="https://youtube.com/@sawgamesstudio?si=k7ueZV6uH3KtnTNZ"><img class="socialmedia" src="./images/youtube.jpg" alt="youtube"></a></li>
+                            <ul>
+                                <li><a data-type="logo" href="./news.html">Новости</a></li>
+                                <li><a data-type="logo" href="./games.html"> Игры</a></li>
+                                <li><a data-type="logo" href="./about.html"> О студии</a></li>
+                                <li><a data-type="logo" href="./arts.html">Фан-арты</a></li>
+                                <li><a data-type="logo" href="./support.html">Поддержка</a></li>
+                                <li><a data-type="logo" href="./videos.html">Видео</a></li>
+                                <li>
+                                    <div id="search">
+                                        <form id="form" onsubmit="return handleSearch(event)">
+                                            <input type="search" name="pashalka" id="pashalka"  placeholder="поиск">
+                                            
+                                        </form>
+                                    </div>
+                                </li>
                             </ul>        
                         </div>
+                        
+                        <div id="message"></div>
                     </div>
                     
                 </nav>
@@ -48,13 +60,15 @@
                         <li><a data-type="logo" href="./arts.html">Фан-арты</a></li>
                         <li><a data-type="logo" href="./support.html">Поддержка</a></li>
                         <li><a data-type="logo" href="./videos.html">Видео</a></li>
+                        <li>
+                            <div id="search">
+                                <form id="form" onsubmit="return handleSearch(event)">
+                                    <input type="search" name="pashalka" id="pashalka"  placeholder="поиск">
+                                    
+                                </form>
+                            </div>
+                        </li>
                     </ul>
-                </div>
-                <div id="search">
-                    <form id="form" onsubmit="return handleSearch(event)">
-                        <input type="search" name="pashalka" id="pashalka"  placeholder="поиск">
-                        
-                    </form>
                 </div>
                 <div id="message"></div>
             </aside>
