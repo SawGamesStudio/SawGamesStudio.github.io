@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>пила игра студия</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="loading-screen"></div>
+        <header class="topbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html"><img class="logo" src="./images/logo.jpg" alt="SAWGAMES " ></a>
+                </div>
+                <nav class="topbar-main">
+                    <ul class="icons">
+                        <li><a href="https://boosty.to/sgstudio"><img class="socialmedia" src="./images/progrev.jpg" alt="boosty"></a></li>
+                        <li><a href="https://apps.rustore.ru/app/com.sgstudio.photographer"><img class="socialmedia" src="./images/rustore.jpg" alt="rustore"></a></li>
+                        <li><a href="https://t.me/sawgamesstudio"><img class="socialmedia" src="./images/telega.jpg" alt="telega"></a></li>
+                        <li><a href="https://vk.com/sawgamesstudio"><img class="socialmedia" src="./images/vk.jpg" alt="vk"></a></li>
+                        <li><a href="https://youtube.com/@sawgamesstudio?si=k7ueZV6uH3KtnTNZ"><img class="socialmedia" src="./images/youtube.jpg" alt="youtube"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header> 
+        
+        <div class="main">
+            <aside class="sidebar">
+               <div>
+                <ul>
+                    <li><a data-type="logo" href="./news.html">Новости</a></li>
+                    <li><a data-type="logo" href="./games.html"> Игры</a></li>
+                    <li><a data-type="logo" href="./about.html"> О студии</a></li>
+                    <li><a data-type="logo" href="./arts.html">Фан-арты</a></li>
+                    <li><a data-type="logo" href="./support.html">Поддержка</a></li>
+                    <li><a data-type="logo" href="./videos.html">Видео</a></li>
+                </ul>
+               </div>
+               <div id="search">
+                    <form id="form" onsubmit="return handleSearch(event)">
+                        <input type="search" name="pashalka" id="pashalka"  value="">
+                        
+                    </form>
+                </div>
+                <div id="message"></div>
+            </aside>
+            <main class="content">
+                <center><h1>ДОБРО ПОЖАЛОВАТЬ</h1></center>
+            </main>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
