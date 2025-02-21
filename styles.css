@@ -49,6 +49,15 @@ li{
     grid-area: cont;
     font-size: large;
 }
+.gamePosters{
+    display: grid;
+    grid-template-columns: 300px;
+}
+.gamePosters img{
+    border: 1px solid darkgray;
+    margin: auto;
+    border-radius: 1%;
+}
 a{
     text-decoration: none;
     outline: none;
@@ -108,7 +117,7 @@ body{
   position: fixed;
   z-index: 9999;
   left: 0;
-  top: 0;
+  top: -100%;
   background: url("./images/pumpkin.png") top repeat-x;
   width: 100vw;
   height: 100vh;
@@ -128,7 +137,7 @@ body{
 
 @keyframes loadingScreen1 {
   to {
-    transform: translateY(100%);
+    transform: translateY(200%);
   }
 }
 
