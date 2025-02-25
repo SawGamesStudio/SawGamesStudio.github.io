@@ -196,3 +196,23 @@ document.querySelector('.burger').addEventListener('click', function(){
     this.classList.toggle('active');
     document.querySelector('.dropdowncontent').classList.toggle('open');
 })
+
+const swiper_wrapper = document.querySelector('.swiper-wrapper');
+const prev = document.querySelector('.swiper-button-prev');
+const next = document.querySelector('.swiper-button-next');
+next.addEventListener("click", () => {
+    const slides = document.querySelectorAll('.swiper-slide');
+    swiper_wrapper.style.animation = "slideright 1000ms ease";
+    setTimeout(() =>{
+        swiper_wrapper.style.animation = "none";
+        swiper_wrapper.appendChild(slides[0])
+    }, 550)
+})
+prev.addEventListener("click", () => {
+    const slides = document.querySelectorAll('.swiper-slide');
+    swiper_wrapper.style.animation = "slideleft 1000ms ease";
+    setTimeout(() =>{
+        swiper_wrapper.style.animation = "none";
+        swiper_wrapper.prepend(slides[slides.length - 1])
+    }, 550)
+})

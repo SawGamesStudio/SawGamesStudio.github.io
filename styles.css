@@ -56,7 +56,7 @@ li{
 .gamePosters img{
     border: 1px solid darkgray;
     margin: auto;
-    border-radius: 1%;
+    border-radius: 50%;
 }
 a{
     text-decoration: none;
@@ -237,6 +237,115 @@ img{
     border: none;
     align-self: flex-end;
 } */
+.game-info{
+    position: absolute;
+    /* a higher z-index put navbar above hamburger */
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100vh;
+    overflow: hidden;
+    /* basic menu styling*/
+    list-style: none;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    /* align-items: start; */
+    /* animate slide up/down */
+    transform: translateX(-100%);
+    transition: transform 0.2s ease-in;}
+.game-info:target{
+    transform: translate(0);
+}
+.close-info{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: auto;
+    font-size: 38px;
+    z-index: 4;
+}
+.game-info img{
+    border-radius: 10%;
+    border: 5px solid black;
+    /* width: 15%; */
+}
+.swiper{
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+    
+    position: relative;
+}
+.swiper .swiper-wrapper{
+    width: 700%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: -75%;
+    display: flex;
+    transition: 1000ms;
+}
+.swiper-slide{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+}
+.swiper-slide p{
+    position: relative;
+    top: 50%;
+    margin: auto;
+    margin-right: 15%;
+}
+.swiper img{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    
+    object-fit: cover;
+
+}
+.swiper button{
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.200);
+    color: #fff;
+    position: absolute;
+    top: 10%;
+    transform: translateY(-50%);
+    width: 4em;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 100ms;
+    z-index: 1;
+    cursor: pointer;
+    transition: 200ms;
+}
+.swiper-button-prev{
+left: 1em;
+}
+.swiper-button-next{
+right: 1em;
+}
+.swiper button:hover{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+@keyframes slideright {
+    from{transform: translateX(0);}
+    to{transform: translateX(-15%);}
+}
+@keyframes slideleft {
+    from{transform: translateX(0);}
+    to{transform: translateX(15%);}
+}
 @media screen and (max-width: 1200px) {
     .icons{
         gap: 5rem;
