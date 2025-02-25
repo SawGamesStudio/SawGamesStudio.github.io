@@ -159,6 +159,7 @@ particle {
     pointer-events: none;
     background-repeat: no-repeat;
     background-size: contain;
+    z-index: 30;
 }
 canvas{
     border: 5px solid chocolate;
