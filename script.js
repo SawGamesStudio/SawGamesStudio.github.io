@@ -24,7 +24,6 @@ function handleSearch(event) { // пасхалко-поисковик
 }
 // *партиклы
 function pop (e) {
-    if(e.target.dataset.type){
     let amount = 10;
     switch (e.target.dataset.type) {
         case 'shadow':
@@ -44,7 +43,6 @@ function pop (e) {
             createParticle(e.clientX, e.clientY, e.target.dataset.type);
         }
     }
-}
 }
 function createParticle (x, y, type) {
     const particle = document.createElement('particle');
