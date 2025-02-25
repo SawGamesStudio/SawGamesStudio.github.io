@@ -358,6 +358,9 @@ right: 1em;
     .container{
         gap: 3rem;
     }
+    .swiper-slide p{
+    top: 40%;
+}
 }
 @media screen and (max-width: 768px) {
     .icons{
@@ -367,6 +370,9 @@ right: 1em;
     {
         gap: 0;
     }
+swiper-slide p{
+    top: 30%;
+ }
 }
 @media screen and (max-width: 576px) {
 
@@ -404,4 +410,7 @@ right: 1em;
         display: contents;
     }
     .logo{height: 75px;}
+        .swiper-slide p{
+    top: 20%;
+}
 }
