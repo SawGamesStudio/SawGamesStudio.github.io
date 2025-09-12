@@ -12,14 +12,18 @@ function handleSearch(event) { // пасхалко-поисковик
     event.preventDefault(); // Предотвращаем отправку формы
     
     const input = document.getElementById('pashalka').value.trim();
-    const messageDiv = document.getElementById('message');
-
-    if (validCodes[input]) {
-        messageDiv.textContent = validCodes[input]();
-    } else {
-        messageDiv.textContent = 'Ошибка';
+    const messageDiv = document.getElementsByClassName('message');
+    for (let i = 0; i < messageDiv.length; i++) {
+        const element = messageDiv[i];
+            if (validCodes[input])
+            {
+                element.textContent = validCodes[input]();
+            } 
+        else {
+            element.textContent = 'Ошибка';
+        }
     }
-
+    
     return false; // Необходимое возвращаемое значение для предотвращения отправки формы
 }
 // *партиклы
