@@ -1,3 +1,4 @@
+const canvas = document.getElementById('canvas1');
 const validCodes = {
     'код1': pashalka1,
     'код2': pashalka1,
@@ -136,7 +137,7 @@ if (document.body.animate) {
     document.querySelectorAll('a').forEach(button => button.addEventListener('click', pop));
 }
 // *Игра
-const canvas = document.getElementById('canvas1');
+
 if(canvas.style.display != 'none'){
 class Player{
     constructor(game){
