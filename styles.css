@@ -38,6 +38,37 @@ li{
 
 }
 
+
+/* Тут фонарик */
+.spotlight-wrap {
+    background: url('images/decBoard.jpeg') no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    cursor: none;
+    position: relative;
+}
+.spotlight-wrap a {
+    position: absolute;
+    z-index: 1;
+    bottom: 30px;
+    right: 40px;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 26px;
+    line-height: 34px;
+    color: #AAA;
+    transition: color 0.5s;
+    text-shadow: 0 0 12px rgba(0,0,0,0.4), 0 2px 6px rgba(0,0,0,0.5);    
+}
+.spotlight-wrap a:hover {
+    color: #FFF;
+}
+.spotlight-wrap .spotlight {
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+}
+/* конец фонарика */
 .main{
     display: grid;
     gap: 3rem;
@@ -48,6 +79,18 @@ li{
 .content{
     grid-area: cont;
     font-size: large;
+}
+
+#decBoard{
+    filter: brightness(50%);
+}
+
+body.detective{
+    background: radial-gradient(circle,rgba(0, 0, 0, 0.85) 0%, rgba(12, 2, 2, 0.9) 100%), url("images/back.jpg");
+    /* background-image: url("images/detec.jpeg"); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: block;
 }
 .gamePosters{
     display: grid;
@@ -77,6 +120,7 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
+
 .container{
     align-items: center;
     display: flex;
@@ -145,7 +189,7 @@ body{
     position: absolute;
     bottom: 0;
 }
-#pashalka{
+.pashalka{
     background: rgb(39, 39, 39);
     border: 1px solid chocolate;
     width: 75%;

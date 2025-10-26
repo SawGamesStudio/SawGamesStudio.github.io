@@ -2,30 +2,54 @@ const validCodes = {
     'код1': pashalka1,
     'код2': pashalka1,
     'код3': pashalka1,
+    'расследование' : sendtoboard,
 };
-
+function sendtoboard() {
+    window.location.href = './detective.html';
+}
 function pashalka1(){
-    canvas.style.display = 'block'
+    canvas.style.display = 'block';
 }
 
 function handleSearch(event) { // пасхалко-поисковик
     event.preventDefault(); // Предотвращаем отправку формы
     
-    const input = document.getElementById('pashalka').value.trim();
-    const messageDiv = document.getElementsByClassName('message');
-    for (let i = 0; i < messageDiv.length; i++) {
-        const element = messageDiv[i];
-            if (validCodes[input])
-            {
-                element.textContent = validCodes[input]();
-            } 
-        else {
-            element.textContent = 'Ошибка';
+    
+    const inputElements = document.querySelectorAll('.pashalka');
+    const messageElements = document.querySelectorAll('.message');
+    
+    let inputValue = '';
+    for (const element of inputElements) {
+        // Проверяем, какой из элементов ввода виден на экране
+        if (element.offsetParent !== null) {
+            inputValue = element.value.trim();
+            break;
         }
     }
-    
+
+    if (validCodes[inputValue]) {
+        validCodes[inputValue](); 
+        
+        messageElements.forEach(element => {
+            element.textContent = '';
+        });
+    } else {
+        messageElements.forEach(element => {
+            element.textContent = 'Ошибка';
+        });
+    }
+
+   
     return false; // Необходимое возвращаемое значение для предотвращения отправки формы
 }
+// фонарик
+$(window).mousemove(function(e){
+    let w = $('.spotlight').innerWidth(),
+    h = $('.spotlight').innerHeight(),
+    t = e.pageY - $('.spotlight').offset().top,
+    l = e.pageX - $('.spotlight').offset().left;
+$('.spotlight').css('background-image', 'radial-gradient(circle at '+ (l / w * 100) +'% '+ (t / h * 100) +'%, transparent 80px, rgba(0, 0, 0, 0.8) 120px)');
+});   
 // *партиклы
 function pop (e) {
     if(e.target.dataset.type){
